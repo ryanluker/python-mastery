@@ -23,3 +23,10 @@ with open("../../Data/portfolio.dat", "r") as f:
 pp = pprint.PrettyPrinter(indent=4)
 pp.pprint(company_dict)
 
+# Compute total portfolio equity and print
+total_port_equity = 0
+for company in company_dict.values():
+    total_port_equity += company.get("total_equity")
+
+pp.pprint(total_port_equity)
+
